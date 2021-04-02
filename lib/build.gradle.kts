@@ -25,6 +25,10 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+    packagingOptions {
+        exclude("META-INF/main.kotlin_module")
+        exclude("META-INF/lib_release.kotlin_module")
+    }
 
 }
 
@@ -33,9 +37,7 @@ dependencies {
     implementation(Config.Libs.kotlinStd)
     implementation(Config.Libs.ui)
     implementation(Config.Libs.zxingCore)
-    implementation(Config.Libs.zxingAndroidEmbedded) {
-        isTransitive = false
-    }
+    implementation(Config.Libs.zxingAndroidEmbedded)
 
 }
 

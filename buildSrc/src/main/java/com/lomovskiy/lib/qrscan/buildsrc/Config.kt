@@ -32,8 +32,9 @@ object Config {
 
         const val kotlin: String = "1.4.30"
         const val ui: String = "1.0.8"
+        const val qrScan: String = "1.0.0"
         const val zxing = "3.3.0"
-        const val zxingAndroidEmbedded: String = "4.2.0"
+        const val zxingAndroidEmbedded: String = "3.6.0"
 
     }
 
@@ -41,6 +42,7 @@ object Config {
 
         const val kotlinStd: String = "org.jetbrains.kotlin:kotlin-stdlib:${Versions.kotlin}"
         const val ui: String = "com.github.lomovskiy:android-lib-ui:${Versions.ui}"
+        const val qrScan: String = "com.github.Lomovskiy:android-lib-qrscan:${Versions.qrScan}"
         const val zxingCore: String = "com.google.zxing:core:${Versions.zxing}"
         const val zxingAndroidEmbedded: String = "com.journeyapps:zxing-android-embedded:${Versions.zxingAndroidEmbedded}"
 

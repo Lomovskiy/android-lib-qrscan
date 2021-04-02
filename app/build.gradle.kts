@@ -24,9 +24,13 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+    packagingOptions {
+        exclude("META-INF/main.kotlin_module")
+        exclude("META-INF/lib_release.kotlin_module")
+    }
 }
 
 dependencies {
-    implementation(project(":lib"))
-    implementation("com.github.lomovskiy:android-lib-ui:1.0.8")
+    implementation(Config.Libs.ui)
+    implementation(Config.Libs.qrScan)
 }
