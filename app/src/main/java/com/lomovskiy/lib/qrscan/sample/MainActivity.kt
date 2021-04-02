@@ -3,14 +3,14 @@ package com.lomovskiy.lib.qrscan.sample
 import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
-import com.lomovskiy.lib.qrscan.ActivityResultContractScanQr
+import com.lomovskiy.lib.qrscan.QrScanContract
 import com.lomovskiy.lib.ui.showToast
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var button: Button
 
-    private val scanQrLauncher = registerForActivityResult(ActivityResultContractScanQr) {
+    private val scanQrLauncher = registerForActivityResult(QrScanContract) {
         if (it != null) {
             showToast(it)
         } else {

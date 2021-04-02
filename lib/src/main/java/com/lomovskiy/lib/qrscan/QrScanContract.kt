@@ -4,13 +4,10 @@ import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import androidx.activity.result.contract.ActivityResultContract
-import androidx.annotation.StringRes
 import com.google.zxing.client.android.Intents
 import com.journeyapps.barcodescanner.CaptureActivity
 
-class QrScanConfig(@StringRes val prompt: Int)
-
-object ActivityResultContractScanQr : ActivityResultContract<QrScanConfig?, String?>() {
+object QrScanContract : ActivityResultContract<QrScanConfig?, String?>() {
 
     override fun createIntent(context: Context, input: QrScanConfig?): Intent {
         return Intent(context, CaptureActivity::class.java).apply {
