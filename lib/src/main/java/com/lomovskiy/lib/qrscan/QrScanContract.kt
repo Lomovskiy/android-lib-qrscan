@@ -7,14 +7,10 @@ import androidx.activity.result.contract.ActivityResultContract
 import com.google.zxing.client.android.Intents
 import com.journeyapps.barcodescanner.CaptureActivity
 
-object QrScanContract : ActivityResultContract<QrScanConfig?, String?>() {
+object QrScanContract : ActivityResultContract<Void, String?>() {
 
-    override fun createIntent(context: Context, input: QrScanConfig?): Intent {
-        return Intent(context, CaptureActivity::class.java).apply {
-            if (input != null) {
-                putExtra(Intents.Scan.PROMPT_MESSAGE, context.getString(input.prompt))
-            }
-        }
+    override fun createIntent(context: Context, input: Void?): Intent {
+        return Intent(context, CaptureActivity::class.java)
     }
 
     override fun parseResult(resultCode: Int, intent: Intent?): String? {

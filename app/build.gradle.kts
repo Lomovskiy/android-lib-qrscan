@@ -32,5 +32,6 @@ android {
 
 dependencies {
     implementation(Config.Libs.ui)
-    implementation(Config.Libs.qrScan)
+    implementation(project(":lib"))
+//    implementation(Config.Libs.qrScan)
 }
