@@ -1,3 +1,3 @@
 include(":lib")
 include(":app")
-rootProject.name = "qrscan"
+rootProject.name = "android-lib-qrscan"
